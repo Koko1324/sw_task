@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 sktime
 pmdarima
 pandas
@@ -16,4 +17,24 @@ xmltodict
 streamlit-option-menu
 millify
 pingouin
+=======
+sktime
+pmdarima
+pandas
+matplotlib
+seaborn
+plotly
+scikit-learn
+yfinance
+lightgbm
+prophet
+statsmodels
+streamlit
+geopandas
+folium
+xmltodict
+streamlit-option-menu
+millify
+pingouin
+>>>>>>> 7778fde582ab8f87a4ec6a36c63166b3f2efc5d4
 jupyterlab
