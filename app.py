@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html, Input, Output # type: ignore
+from dash import Dash, dcc, html, Input, Output
 
 
 app = Dash(__name__)
