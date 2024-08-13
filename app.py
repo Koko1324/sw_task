@@ -1,11 +1,12 @@
 import streamlit as st
 from PIL import Image
+import time
 
 # 페이지 레이아웃 설정
 st.set_page_config(layout="wide")
 
-# 로고 이미지를 열고, 크기를 조절합니다.
-logo = Image.open("logo.png")
+# 슬라이드 쇼에 사용할 이미지 파일 경로를 리스트로 만듭니다.
+image_files = ["image1.jpeg", "image2.jpeg", "image3.jpeg"]  # 파일명을 실제 이미지 파일명으로 바꾸세요.
 
 # 세션 상태를 초기화합니다.
 if 'selected_option' not in st.session_state:
@@ -14,11 +15,9 @@ if 'selected_option' not in st.session_state:
 # 헤더 섹션을 만들기 위해 열(column)을 나눕니다.
 header_col1, header_col2 = st.columns([1, 5])
 
-#레이아웃 나누기
-col3, col4, col5, col6 = st.columns([1,1,1,1])
-
 with header_col1:
     # 첫 번째 열에 로고 이미지를 추가합니다.
+    logo = Image.open("logo.png")
     st.image(logo, use_column_width=True)
 
 with header_col2:
@@ -33,12 +32,17 @@ with header_col2:
 def go_to_chatbot():
     st.session_state.selected_option = "챗봇"
 
-
-
 # 현재 선택된 옵션에 따라 화면을 업데이트합니다.
 if st.session_state.selected_option == "홈":
     st.write("일정에 맞는 여행 코스를 짜드릴게요")
-    # 커스터마이즈된 버튼 스타일을 위한 텍스트 링크
+
+    # 슬라이드 쇼 구현
+    for image_file in image_files:
+        image = Image.open(image_file)
+        st.image(image, use_column_width=True)
+        time.sleep(3)  # 3초 간격으로 이미지 전환
+        st.experimental_rerun()  # 페이지 리프레시
+
     button_clicked = st.button("챗봇으로 여행 코스 짜기(더블 클릭)")
     if button_clicked:
         go_to_chatbot()
