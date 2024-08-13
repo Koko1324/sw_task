@@ -25,8 +25,8 @@ with header_col2:
     # 두 번째 열에 선택 박스를 추가합니다.
     st.session_state.language = st.selectbox(
         "Language",
-        ["KO🇰🇷", "EN🇺🇸", "CN🇨🇳", "JP🇯🇵"],
-        index=["KO🇰🇷", "EN🇺🇸", "CN🇨🇳", "JP🇯🇵"].index(st.session_state.language)
+        ["KO", "EN", "CN", "JP"],
+        index=["KO", "EN", "CN", "JP"].index(st.session_state.language)
     )
 
 # 현재 선택된 옵션에 따라 화면을 업데이트합니다.(여기 챗봇 코드 넣어)
