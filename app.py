@@ -6,7 +6,7 @@ import time
 st.set_page_config(layout="wide")
 
 # 슬라이드 쇼에 사용할 이미지 파일 경로를 리스트로 만듭니다.
-image_files = ["image1.jpeg", "image2.jpeg", "image3.jpeg"]  # 파일명을 실제 이미지 파일명으로 바꾸세요.
+image_files = ["강원특별자치도.jpeg", "경기도.jpeg", "경상남도.jpeg", "경상북도.jpeg", "광주광역시.jpeg", "대구광역시.jpeg", "대전광역시.jpeg", "부산광역시.jpeg", "서울특별시.jpeg", "세종특별시.jpeg", "울산광역시.jpeg", "인천광역시.jpeg", "전라남도.jpeg", "전북특별자치도.jpeg", "제주특별자치도.jpeg", "충청남도.jpeg", "충청북도.jpeg"]  # 파일명을 실제 이미지 파일명으로 바꾸세요.
 
 # 세션 상태를 초기화합니다.
 if 'selected_option' not in st.session_state:
