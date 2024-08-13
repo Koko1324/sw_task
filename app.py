@@ -26,9 +26,7 @@ with header_col2:
     st.session_state.selected_option = st.selectbox(
         "Select Option", 
         ["KO🇰🇷","EN","CN","JP"],
-        index=["KO","EN","CN","JP"].index(st.session_state.selected_option)
+        index=["KO🇰🇷","EN","CN","JP"].index(st.session_state.selected_option)
     )
 
-# 현재 선택된 옵션에 따라 화면을 업데이트합니다.
-if st.session_state.selected_option == "챗봇":
-    st.write("챗봇 코드 넣는곳")
+# 현재 선택된 옵션에 따라 화면을 업데이트합니다.(여기 챗봇 코드 넣어)
